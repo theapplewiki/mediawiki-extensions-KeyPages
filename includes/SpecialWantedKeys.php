@@ -5,7 +5,6 @@ namespace MediaWiki\Extension\WantedKeys;
 
 use MediaWiki\Cache\LinkBatchFactory;
 use MediaWiki\Linker\LinksMigration;
-use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\SpecialPage\WantedQueryPage;
 use MediaWiki\Title\Title;
 use Wikimedia\Rdbms\IConnectionProvider;
