@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Adam Demasi"
+		]
+	},
+	"wantedkeys": "Wanted key pages",
+	"wantedkeys-desc": "Custom extension for The Apple Wiki that [[Special:WantedKeys|lists firmware keys]] that have not been filled out.",
+	"wantedkeys-intro": "This is a list of [[Firmware Keys|firmware keys]] that have not yet been filled out. You can help out by [[Decrypting Firmwares|decrypting firmware]] and submitting your results.",
+	"wantedkeys-build": "Build",
+	"wantedkeys-devices": "Devices"
+}

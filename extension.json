@@ -1,0 +1,41 @@
+{
+	"name": "WantedKeys",
+	"version": "",
+	"author": [
+		"Adam Demasi"
+	],
+	"url": "https://theapplewiki.com/",
+	"descriptionmsg": "wantedkeys-desc",
+	"type": "specialpage",
+	"license-name": "GPL-2.0-or-later",
+	"requires": {
+		"MediaWiki": ">= 1.43.0"
+	},
+	"MessagesDirs": {
+		"Details": [
+			"/i18n"
+		]
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\WantedKeys\\": "includes/"
+	},
+	"SpecialPages": {
+		"WantedKeys": {
+			"class": "MediaWiki\\Extension\\WantedKeys\\SpecialWantedKeys",
+			"services": [
+				"DBLoadBalancerFactory",
+				"LinkBatchFactory",
+				"LinksMigration"
+			]
+		}
+	},
+	"HookHandlers": {
+		"Hooks": {
+			"class": "MediaWiki\\Extension\\WantedKeys\\Hooks"
+		}
+	},
+	"Hooks": {
+		"wgQueryPages": "Hooks"
+	},
+	"manifest_version": 2
+}
