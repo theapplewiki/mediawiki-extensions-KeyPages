@@ -21,6 +21,23 @@
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\KeyPages\\": "includes/"
 	},
+	"namespaces": [
+		{
+			"id": 2304,
+			"constant": "NS_KEYS",
+			"name": "Keys",
+			"subpages": false,
+			"content": false,
+			"defaultcontentmodel": "keys"
+		},
+		{
+			"id": 2305,
+			"constant": "NS_KEYS_TALK",
+			"name": "Keys_talk",
+			"subpages": false,
+			"content": false
+		}
+	],
 	"SpecialPages": {
 		"KeyPages": {
 			"class": "MediaWiki\\Extension\\KeyPages\\SpecialKeyPages",
@@ -37,7 +54,9 @@
 		}
 	},
 	"Hooks": {
-		"wgQueryPages": "Hooks"
+		"wgQueryPages": "Hooks",
+		"RandomPageQuery": "Hooks",
+		"WantedPages::getQueryInfo": "Hooks"
 	},
 	"manifest_version": 2
 }
