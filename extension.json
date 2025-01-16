@@ -49,7 +49,7 @@
 	},
 	"ContentHandlers": {
 		"keys":  {
-			"class": "MediaWiki\\Extension\\WantedKeys\\KeysContentHandler",
+			"class": "MediaWiki\\Extension\\KeyPages\\KeysContentHandler",
 			"services": [
 				"ParserFactory",
 				"ParsoidParserFactory"
@@ -68,6 +68,6 @@
 		"ContentHandlerDefaultModelFor": "Hooks",
 		"CodeEditorGetPageLanguage": "Hooks"
 	},
-	"callback": "MediaWiki\\Extension\\WantedKeys\\Hooks::onRegistration",
+	"callback": "MediaWiki\\Extension\\KeyPages\\Hooks::onRegistration",
 	"manifest_version": 2
 }
