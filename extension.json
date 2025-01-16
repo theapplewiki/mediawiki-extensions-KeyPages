@@ -1,27 +1,29 @@
 {
-	"name": "WantedKeys",
-	"version": "",
+	"name": "KeyPages",
 	"author": [
-		"Adam Demasi"
+		"[[User:kirb|Adam Demasi]]"
 	],
 	"url": "https://theapplewiki.com/",
-	"descriptionmsg": "wantedkeys-desc",
-	"type": "specialpage",
+	"descriptionmsg": "keypages-desc",
+	"type": "other",
 	"license-name": "GPL-2.0-or-later",
 	"requires": {
 		"MediaWiki": ">= 1.43.0"
 	},
 	"MessagesDirs": {
-		"Details": [
+		"KeyPages": [
 			"/i18n"
 		]
 	},
+	"ExtensionMessagesFiles": {
+		"KeyPagesAlias": "KeyPages.i18n.alias.php"
+	},
 	"AutoloadNamespaces": {
-		"MediaWiki\\Extension\\WantedKeys\\": "includes/"
+		"MediaWiki\\Extension\\KeyPages\\": "includes/"
 	},
 	"SpecialPages": {
-		"WantedKeys": {
-			"class": "MediaWiki\\Extension\\WantedKeys\\SpecialWantedKeys",
+		"KeyPages": {
+			"class": "MediaWiki\\Extension\\KeyPages\\SpecialKeyPages",
 			"services": [
 				"DBLoadBalancerFactory",
 				"LinkBatchFactory",
@@ -31,7 +33,7 @@
 	},
 	"HookHandlers": {
 		"Hooks": {
-			"class": "MediaWiki\\Extension\\WantedKeys\\Hooks"
+			"class": "MediaWiki\\Extension\\KeyPages\\Hooks"
 		}
 	},
 	"Hooks": {

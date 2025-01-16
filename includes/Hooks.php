@@ -2,7 +2,7 @@
 
 declare( strict_types=1 );
 
-namespace MediaWiki\Extension\WantedKeys;
+namespace MediaWiki\Extension\KeyPages;
 
 use MediaWiki\SpecialPage\Hook\WgQueryPagesHook;
 

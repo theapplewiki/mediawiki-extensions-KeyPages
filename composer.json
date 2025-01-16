@@ -1,7 +1,7 @@
 {
-	"name": "chariz/mediawiki-extension-wantedkeys",
+	"name": "chariz/mediawiki-extension-keypages",
 	"type": "mediawiki-extension",
-	"description": "List key pages that have not been filled out.",
+	"description": "Handles The Apple Wiki's firmware keys database.",
 	"keywords": [
 		"mediawiki"
 	],

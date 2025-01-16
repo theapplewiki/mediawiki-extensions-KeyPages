@@ -1,10 +1,10 @@
 <h2 align="center">
 <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f510.png">
 <br>
-WantedKeys
+KeyPages
 </h2>
 
-**Custom extension for [The Apple Wiki](https://theapplewiki.com/) that [lists firmware keys](https://theapplewiki.com/wiki/Special:WantedKeys) that have not been filled out.**
+**Custom extension for [The Apple Wiki](https://theapplewiki.com/) that handles our database of [firmware keys](https://theapplewiki.com/wiki/Firmware_Keys).**
 
 Not intended for use outside of The Apple Wiki. No support will be provided for other wikis.
 
@@ -18,8 +18,8 @@ Not intended for use outside of The Apple Wiki. No support will be provided for 
 
 Developed by [Chariz](https://chariz.com/) for [The Apple Wiki](https://theapplewiki.com/):
 
-* [Adam Demasi (@kirb)](https://github.com/kirb)
+- [Adam Demasi (@kirb)](https://github.com/kirb)
 
 ## License
 
-Licensed under the GNU General Public License, version 2.0 or later. Refer to [LICENSE.md](https://github.com/theapplewiki/mediawiki-extension-WantedKeys/blob/main/LICENSE.md).
+Licensed under the GNU General Public License, version 2.0 or later. Refer to [LICENSE.md](https://github.com/theapplewiki/mediawiki-extension-KeyPages/blob/main/LICENSE.md).
