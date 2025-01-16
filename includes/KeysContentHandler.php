@@ -75,17 +75,10 @@ class KeysContentHandler extends JsonContentHandler {
 		if ( $parserOptions->getUseParsoid() ) {
 			$parser = $this->parsoidParserFactory->create();
 			$extraArgs = [ $cpoParams->getPreviousOutput() ];
-			// TODO: Am I meant to get this somehow?
-			$moduleRevId = null;
 		} else {
 			$parser = $this->parserFactory->getInstance();
 			$extraArgs = [];
-			$moduleRevId = $parser->fetchCurrentRevisionRecordOfTitle( $moduleTitle )->getId();
 		}
-
-		// Add transclusion metadata so it appears on Special:WhatLinksHere
-		// TODO: Is this really needed?
-		$parserOutput->addTemplate( $moduleTitle, $moduleTitle->getArticleID(), $moduleRevId );
 
 		// If HTML was not requested, we don't need to do anything
 		if ( !$cpoParams->getGenerateHtml() ) {
