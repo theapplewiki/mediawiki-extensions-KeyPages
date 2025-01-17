@@ -7,7 +7,7 @@
 
 	"keypages-desc": "Handles The Apple Wiki's [[Firmware Keys|firmware keys]] database.",
 
-	"keypages-page-content": "{{#invoke:Keys|main}}",
+	"keypages-page-content": "<includeonly>{{#invoke:Keys|main}}</includeonly>",
 
 	"wantedkeys": "Wanted key pages",
 	"wantedkeys-intro": "This is a list of [[Firmware Keys|firmware keys]] that have not yet been filled out. You can help out by [[Decrypting Firmwares|decrypting firmware]] and submitting your results.",
