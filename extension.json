@@ -47,6 +47,15 @@
 			]
 		}
 	},
+	"ContentHandlers": {
+		"keys":  {
+			"class": "MediaWiki\\Extension\\KeyPages\\KeysContentHandler",
+			"services": [
+				"ParserFactory",
+				"ParsoidParserFactory"
+			]
+		}
+	},
 	"HookHandlers": {
 		"Hooks": {
 			"class": "MediaWiki\\Extension\\KeyPages\\Hooks"
@@ -55,7 +64,10 @@
 	"Hooks": {
 		"wgQueryPages": "Hooks",
 		"RandomPageQuery": "Hooks",
-		"WantedPages::getQueryInfo": "Hooks"
+		"WantedPages::getQueryInfo": "Hooks",
+		"ContentHandlerDefaultModelFor": "Hooks",
+		"CodeEditorGetPageLanguage": "Hooks"
 	},
+	"callback": "MediaWiki\\Extension\\KeyPages\\Hooks::onRegistration",
 	"manifest_version": 2
 }
