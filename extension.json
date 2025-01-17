@@ -27,8 +27,7 @@
 			"constant": "NS_KEYS",
 			"name": "Keys",
 			"subpages": false,
-			"content": false,
-			"defaultcontentmodel": "keys"
+			"content": false
 		},
 		{
 			"id": 2305,
