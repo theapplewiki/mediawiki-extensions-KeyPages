@@ -16,7 +16,7 @@
 		]
 	},
 	"ExtensionMessagesFiles": {
-		"KeyPagesAlias": "KeyPages.i18n.alias.php"
+		"WantedKeysAlias": "WantedKeys.i18n.alias.php"
 	},
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\KeyPages\\": "includes/"
@@ -39,8 +39,8 @@
 		}
 	],
 	"SpecialPages": {
-		"KeyPages": {
-			"class": "MediaWiki\\Extension\\KeyPages\\SpecialKeyPages",
+		"WantedKeys": {
+			"class": "MediaWiki\\Extension\\KeyPages\\SpecialWantedKeys",
 			"services": [
 				"DBLoadBalancerFactory",
 				"LinkBatchFactory",
