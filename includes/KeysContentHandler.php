@@ -49,6 +49,7 @@ class KeysContentHandler extends JsonContentHandler {
 		if ( !$status->isOK() ) {
 			return $content->validate();
 		}
+
 		return $status;
 	}
 
@@ -64,12 +65,6 @@ class KeysContentHandler extends JsonContentHandler {
 
 		$parserOptions = $cpoParams->getParserOptions();
 		$revId = $cpoParams->getRevId();
-
-		// Make sure the module exists
-		$moduleTitle = Title::makeTitleSafe( NS_MODULE, 'Keys' );
-		if ( !$moduleTitle ) {
-			throw new Exception( 'Keys module title is not valid' );
-		}
 
 		// Get parser
 		if ( $parserOptions->getUseParsoid() ) {
@@ -94,7 +89,7 @@ class KeysContentHandler extends JsonContentHandler {
 
 		// Render a wikitext page containing the Scribunto invocation
 		$parserOutput = $parser->parse(
-			'{{#invoke:' . $moduleTitle->getText() . '|main}}',
+			'{{int:keypages-page-content}}',
 			$cpoParams->getPage(),
 			$parserOptions,
 			true,
