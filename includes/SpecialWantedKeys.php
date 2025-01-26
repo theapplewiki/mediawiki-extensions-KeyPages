@@ -35,10 +35,7 @@ class SpecialWantedKeys extends WantedQueryPage {
 	}
 
 	/**
-	 * This is the actual workhorse. It does everything needed to make a
-	 * real, honest-to-gosh query page.
-	 * @stable to override
-	 * @param string|null $par
+	 * @inheritDoc
 	 */
 	public function execute( $par ) {
 		$transcluded = $this->including();
@@ -56,17 +53,7 @@ class SpecialWantedKeys extends WantedQueryPage {
 	}
 
 	/**
-	 * Format and output report results using the given information plus
-	 * OutputPage
-	 *
-	 * @stable to override
-	 *
-	 * @param OutputPage $out OutputPage to print to
-	 * @param Skin $skin User skin to use
-	 * @param IReadableDatabase $dbr Database (read) connection to use
-	 * @param IResultWrapper $res Result pointer
-	 * @param int $num Number of available result rows
-	 * @param int $offset Paging offset
+	 * @inheritDoc
 	 */
 	protected function outputResults( $out, $skin, $dbr, $res, $num, $offset ) {
 		if ( $num == 0 ) {
@@ -93,13 +80,7 @@ class SpecialWantedKeys extends WantedQueryPage {
 	}
 
 	/**
-	 * Format an individual result
-	 *
-	 * @stable to override
-	 *
-	 * @param Skin $skin Skin to use for UI elements
-	 * @param stdClass $result Result row
-	 * @return string
+	 * @inheritDoc
 	 */
 	public function formatResult( $skin, $result ) {
 		$linkRenderer = $this->getLinkRenderer();
@@ -138,27 +119,7 @@ class SpecialWantedKeys extends WantedQueryPage {
 	}
 
 	/**
-	 * Subclasses return an SQL query here, formatted as an array with the
-	 * following keys:
-	 *    tables => Table(s) for passing to Database::select()
-	 *    fields => Field(s) for passing to Database::select(), may be *
-	 *    conds => WHERE conditions
-	 *    options => options
-	 *    join_conds => JOIN conditions
-	 *
-	 * Note that the query itself should return the following three columns:
-	 * 'namespace', 'title', and 'value'. 'value' is used for sorting.
-	 *
-	 * These may be stored in the querycache table for expensive queries,
-	 * and that cached data will be returned sometimes, so the presence of
-	 * extra fields can't be relied upon. The cached 'value' column will be
-	 * an integer; non-numeric values are useful only for sorting the
-	 * initial query (except if they're timestamps, see usesTimestamps()).
-	 *
-	 * Don't include an ORDER or LIMIT clause, they will be added.
-	 *
-	 * @return array
-	 * @since 1.18, abstract since 1.43
+	 * @inheritDoc
 	 */
 	public function getQueryInfo() {
 		$dbr = $this->getDatabaseProvider()->getReplicaDatabase();
@@ -193,21 +154,14 @@ class SpecialWantedKeys extends WantedQueryPage {
 	}
 
 	/**
-	 * Order by title for pages with the same number of links to them
-	 *
-	 * @stable to override
-	 * @return array
-	 * @since 1.29
+	 * @inheritDoc
 	 */
 	protected function getOrderFields() {
 		return [ 'title' ];
 	}
 
 	/**
-	 * Cache page existence for performance
-	 * @stable to override
-	 * @param IDatabase $db
-	 * @param IResultWrapper $res
+	 * @inheritDoc
 	 */
 	protected function preprocessResults( $db, $res ) {
 		parent::preprocessResults( $db, $res );
@@ -239,14 +193,7 @@ class SpecialWantedKeys extends WantedQueryPage {
 	}
 
 	/**
-	 * Under which header this special page is listed in Special:SpecialPages
-	 * See messages 'specialpages-group-*' for valid names
-	 * This method defaults to group 'other'
-	 *
-	 * @stable to override
-	 *
-	 * @return string
-	 * @since 1.21
+	 * @inheritDoc
 	 */
 	protected function getGroupName() {
 		return 'maintenance';
