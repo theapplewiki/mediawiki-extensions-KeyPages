@@ -169,7 +169,9 @@ class SpecialWantedKeys extends WantedQueryPage {
 		// Split into groups
 		$this->groupedResults = [];
 
-		foreach ( $res as $row ) {
+		$num = min( $this->numRows, $this->limit );
+
+		for ( $i = 0; $i < $num && $row = $res->fetchObject(); $i++ ) {
 			$matches = [];
 			preg_match( '/^(.*)_\((.*)\)$/', $row->title, $matches );
 			if ( !$matches || count( $matches ) !== 3 ) {
