@@ -84,7 +84,6 @@ class SpecialWantedKeys extends WantedQueryPage {
 	 */
 	public function formatResult( $skin, $result ) {
 		$linkRenderer = $this->getLinkRenderer();
-		$lang = $this->getLanguage();
 
 		$html = [];
 		$html[] = '<tr>';
